@@ -1,3 +1,7 @@
+#' ---
+#' output: github_document
+#' ---
+
 # Testing how to get Census Data
 
 ## Connect to ACS API
@@ -6,13 +10,13 @@
 # Add key to .Renviron
 # Sys.setenv(CENSUS_KEY="YOURKEYHERE")
 # Reload .Renviron
-readRenviron("~/.Renviron")
+# readRenviron("~/.Renviron")
 # Check to see that the expected key is output in your R console
-CENSUS_KEY <- Sys.getenv("CENSUS_KEY")
+# CENSUS_KEY <- Sys.getenv("CENSUS_KEY")
 
 # Install Census API package
-install.packages("devtools")
-devtools::install_github("hrecht/censusapi")
+#install.packages("devtools")
+# devtools::install_github("hrecht/censusapi")
 
 # Load the package
 library("censusapi")
@@ -25,16 +29,16 @@ library("censusapi")
 # 5. region
 
 # Get name of available datasets and store them into apis:
-apis <- listCensusApis()
-View(apis)
+apis <- censusapi::listCensusApis()
+# View(apis)
 
 # Get the names of the variables by using 'listCensusMetadata' function
 vars2014 <- listCensusMetadata(name="acs/acs5", vintage=2014, "v")
-View(vars2014)
+
 
 # Arguments: geography
 geovars2014 <- listCensusMetadata(name="acs/acs5",vintage=2014,"g")
-View(geovars2014)
+# View(geovars2014)
 
 # See variables for 2018
 vars2018 <- listCensusMetadata(name="acs/acs1",vintage=2018,"v")
