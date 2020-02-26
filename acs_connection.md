@@ -39,7 +39,7 @@ Anyway, you’ll have to run these lines every time you disconnect R:
 
 ``` r
 # Add key to .Renviron
-Sys.setenv(CENSUS_KEY="e3111ffad343455b6e8820f4ab4db17fad17502a")
+Sys.setenv(CENSUS_KEY="YOUR KEY HERE")
 # Reload .Renviron
  readRenviron("~/.Renviron")
 # Check to see that the expected key is output in your R console
